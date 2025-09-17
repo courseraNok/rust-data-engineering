@@ -12,12 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ../week1
+        working-directory: week1
 
     steps:
     - uses: actions/checkout@v4
       with:
         path: .
+    
+    - name: Print dir
+      run: ls -la
 
     - name: Run Lint
       run: make lint
@@ -33,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ../week2
+        working-directory: week2
 
     steps:
     - uses: actions/checkout@v4
@@ -54,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ../week3
+        working-directory: week3
 
     steps:
     - uses: actions/checkout@v4
@@ -75,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ../week4
+        working-directory: week4
 
     steps:
     - uses: actions/checkout@v4
