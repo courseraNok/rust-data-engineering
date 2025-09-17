@@ -10,6 +10,9 @@ jobs:
   check_week1:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ../week1
 
     steps:
     - uses: actions/checkout@v4
@@ -17,20 +20,20 @@ jobs:
         path: .
 
     - name: Run Lint
-      working-directory: week1
       run: make lint
 
     - name: Run Build
-      working-directory: week1
       run: make build
 
     - name: Run tests
-      working-directory: week1
       run: make test
 
   check_week2:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ../week2
 
     steps:
     - uses: actions/checkout@v4
@@ -38,20 +41,20 @@ jobs:
         path: .
 
     - name: Run Lint
-      working-directory: week2
       run: make lint
 
     - name: Run Build
-      working-directory: week2
       run: make build
 
     - name: Run tests
-      working-directory: week2
       run: make test
 
   check_week3:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ../week3
 
     steps:
     - uses: actions/checkout@v4
@@ -59,20 +62,20 @@ jobs:
         path: .
 
     - name: Run Lint
-      working-directory: week3
       run: make lint
 
     - name: Run Build
-      working-directory: week3
       run: make build
 
     - name: Run tests
-      working-directory: week3
       run: make test
 
   check_week4:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ../week4
 
     steps:
     - uses: actions/checkout@v4
@@ -80,13 +83,10 @@ jobs:
         path: .
 
     - name: Run Lint
-      working-directory: week4
       run: make lint
 
     - name: Run Build
-      working-directory: week4
       run: make build
 
     - name: Run tests
-      working-directory: week4
       run: make test
